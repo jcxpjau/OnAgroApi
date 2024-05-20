@@ -20,6 +20,7 @@ class App {
     }
     private database() {
         dotenv.config();
+        mongoose.set("strictQuery", false);
         if ( process.env.environment == "production" ) {
             mongoose.connect( 'mongodb+srv://jcxpjau:MacosJau1689@api.jfnet6u.mongodb.net/?retryWrites=true&w=majority&appName=' + process.env.db );
         } else {
