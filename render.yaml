@@ -1,0 +1,18 @@
+# Exported from Render on 2024-05-21T12:35:25Z
+services:
+- type: web
+  name: OnAgroApi
+  runtime: node
+  repo: https://github.com/jcxpjau/OnAgroApi
+  plan: free
+  envVars:
+  - key: PORT
+    sync: false
+  - key: db
+    sync: false
+  - key: environment
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: npm run dev
+version: "1"
